@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rowel Chess OS – Where You Learn to Think Like Champions</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Rowel Chess OS is an AI-powered chess learning platform combining gameplay, Duolingo-style lessons, TikTok-style feed, and a personal AI coach. Learn chess online like never before." />
+  <meta name="keywords" content="Chess Learning Platform, AI Chess Coach, Learn Chess Online, Chess Training App, Tactical Chess Learning, Chess Improvement System, Interactive Chess Lessons" />
+  <meta name="author" content="Rowel Chess OS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rowel.xyz/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rowel.xyz/" />
+  <meta property="og:title" content="Rowel Chess OS – AI-Powered Chess Learning Platform" />
+  <meta property="og:description" content="Where you don't just play chess… you learn to think like champions. AI coaching, missions, and a TikTok-style chess feed." />
+  <meta property="og:image" content="https://rowel.xyz/og-image.png" />
+  <meta property="og:site_name" content="Rowel Chess OS" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@rowelchess" />
+  <meta name="twitter:title" content="Rowel Chess OS – AI Chess Learning" />
+  <meta name="twitter:description" content="Chess + AI Coaching + Daily Missions + TikTok Feed. The future of chess learning." />
+  <meta name="twitter:image" content="https://rowel.xyz/og-image.png" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Rowel Chess OS",
+    "url": "https://rowel.xyz",
+    "description": "AI-powered chess learning platform with personal coaching, daily missions, and social competition.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "offers": [
+      { "@type": "Offer", "name": "Free Plan", "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Premium Plan", "price": "9.99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Pro Plan", "price": "19.99", "priceCurrency": "USD" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "salatrir@gmail.com",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">♛</span>
+        <span class="logo-text">Rowel <span class="logo-accent">Chess OS</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#learn" data-i18n="nav.learn">Learn</a></li>
+        <li><a href="#feed" data-i18n="nav.feed">Feed</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="#play" class="btn btn-primary btn-sm" data-i18n="nav.play">Play Free</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-board" id="heroBoard"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">AI-Powered Chess Learning Platform</div>
+      <h1 class="hero-title">
+        <span class="hero-title-main" data-i18n="hero.title1">Where You Don't Just</span>
+        <span class="hero-title-accent" data-i18n="hero.title2">Play Chess…</span>
+        <span class="hero-title-sub" data-i18n="hero.title3">You Learn to Think Like Champions.</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero.desc">Chess.com gameplay × Duolingo learning × TikTok feed × AI personal coach — the world's first Chess Learning Operating System.</p>
+      <div class="hero-cta">
+        <a href="#play" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Start Learning Free</a>
+        <a href="#features" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">Explore Features</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="50000">0</span><span class="stat-label" data-i18n="stat.players">Players</span></div>
+        <div class="stat"><span class="stat-num" data-count="1200">0</span><span class="stat-label" data-i18n="stat.lessons">Daily Lessons</span></div>
+        <div class="stat"><span class="stat-num" data-count="98">0</span><span class="stat-label" data-i18n="stat.accuracy">% AI Accuracy</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span data-i18n="hero.scroll">Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== LIVE BOARD / PLAY ===== -->
+  <section class="play-section" id="play">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="play.eyebrow">Interactive Demo</span>
+        <h2 data-i18n="play.title">Play & Learn Right Now</h2>
+        <p data-i18n="play.desc">Every move is explained. Every mistake is a lesson. AI coach watches every game.</p>
+      </div>
+      <div class="play-layout">
+        <div class="board-wrapper">
+          <div class="chess-board" id="chessBoard"></div>
+          <div class="board-controls">
+            <button class="btn btn-secondary" id="newGameBtn" data-i18n="play.newgame">New Game</button>
+            <button class="btn btn-secondary" id="flipBoardBtn" data-i18n="play.flip">Flip Board</button>
+            <button class="btn btn-secondary" id="undoMoveBtn" data-i18n="play.undo">Undo</button>
+            <button class="btn btn-primary" id="analyzeBtn" data-i18n="play.analyze">Analyze with AI</button>
+          </div>
+        </div>
+        <div class="coach-panel">
+          <div class="coach-header">
+            <div class="coach-avatar">♛</div>
+            <div class="coach-info">
+              <div class="coach-name">Rowel AI Coach</div>
+              <div class="coach-status" id="coachStatus">Watching your game…</div>
+            </div>
+          </div>
+          <div class="coach-messages" id="coachMessages">
+            <div class="coach-msg coach-intro">
+              <span class="msg-icon">🧠</span>
+              <p data-i18n="coach.intro">I'll analyze every move you make and explain the thinking behind champion-level chess.</p>
+            </div>
+          </div>
+          <div class="coach-input-area">
+            <input type="text" id="coachInput" class="coach-input" placeholder="Ask your AI coach anything…" data-i18n-placeholder="coach.placeholder" />
+            <button class="btn btn-primary" id="coachSendBtn">→</button>
+          </div>
+          <div class="coach-loading" id="coachLoading" style="display:none;">
+            <div class="thinking-dots"><span></span><span></span><span></span></div>
+            <span data-i18n="coach.thinking">Coach is thinking…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="features.eyebrow">Platform Features</span>
+        <h2 data-i18n="features.title">Everything You Need to Master Chess</h2>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card feature-card--large" data-feature="coach">
+          <div class="feature-icon">🧠</div>
+          <h3 data-i18n="feat.coach.title">AI Personal Coach</h3>
+          <p data-i18n="feat.coach.desc">Your coach remembers every game, detects your weaknesses, and builds a personalized improvement plan. Post-game analysis explains why you lost and what to fix.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat.coach.l1">Blunder & missed tactic detection</li>
+            <li data-i18n="feat.coach.l2">Weekly improvement plans</li>
+            <li data-i18n="feat.coach.l3">Adaptive learning path</li>
+            <li data-i18n="feat.coach.l4">Pattern memory across all games</li>
+          </ul>
+          <div class="feature-tag premium">Premium</div>
+        </div>
+
+        <div class="feature-card" data-feature="missions">
+          <div class="feature-icon">🎯</div>
+          <h3 data-i18n="feat.missions.title">Daily Missions</h3>
+          <p data-i18n="feat.missions.desc">Duolingo-style daily challenges. 5–10 minutes of tactical puzzles calibrated to your exact level. Build streaks, earn XP, level up.</p>
+          <div class="feature-tag free">Free</div>
+        </div>
+
+        <div class="feature-card" data-feature="feed">
+          <div class="feature-icon">📱</div>
+          <h3 data-i18n="feat.feed.title">Chess Shorts Feed</h3>
+          <p data-i18n="feat.feed.desc">Vertical scroll through 1-minute chess lessons, tactical highlights, and famous game moments — explained by AI.</p>
+          <div class="feature-tag free">Free</div>
+        </div>
+
+        <div class="feature-card" data-feature="profile">
+          <div class="feature-icon">🧩</div>
+          <h3 data-i18n="feat.profile.title">Mind Map Profile</h3>
+          <p data-i18n="feat.profile.desc">A visual brain map of your chess style: attack tendencies, defense patterns, and mistake patterns. Evolves with every game you play.</p>
+          <div class="feature-tag pro">Pro</div>
+        </div>
+
+        <div class="feature-card" data-feature="matchmaking">
+          <div class="feature-icon">🤝</div>
+          <h3 data-i18n="feat.match.title">Smart Matchmaking</h3>
+          <p data-i18n="feat.match.desc">Match based on thinking style, not just ELO. Behavioral similarity matching reduces frustration and maximizes learning speed.</p>
+          <div class="feature-tag premium">Premium</div>
+        </div>
+
+        <div class="feature-card" data-feature="analytics">
+          <div class="feature-icon">📊</div>
+          <h3 data-i18n="feat.analytics.title">Chess Analytics</h3>
+          <p data-i18n="feat.analytics.desc">Performance tracking, weakness analysis, win/loss trends, and learning progress charts in a beautiful dashboard.</p>
+          <div class="feature-tag pro">Pro</div>
+        </div>
+
+        <div class="feature-card" data-feature="social">
+          <div class="feature-icon">🌍</div>
+          <h3 data-i18n="feat.social.title">Social Network</h3>
+          <p data-i18n="feat.social.desc">Clubs, nations ranking, school competitions, global tournaments, and leaderboards. Chess as a community sport.</p>
+          <div class="feature-tag free">Free</div>
+        </div>
+
+        <div class="feature-card" data-feature="learning">
+          <div class="feature-icon">♟️</div>
+          <h3 data-i18n="feat.learn.title">Learning-Based Play</h3>
+          <p data-i18n="feat.learn.desc">Every match teaches you something. Each move is labeled: fork, pin, skewer, sacrifice. You're rewarded for thinking quality, not just winning.</p>
+          <div class="feature-tag free">Free</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAILY MISSIONS ===== -->
+  <section class="missions-section" id="learn">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="missions.eyebrow">Daily Missions</span>
+        <h2 data-i18n="missions.title">5 Minutes a Day. Champions Are Made.</h2>
+        <p data-i18n="missions.desc">Your personalized daily training plan. Complete missions to earn XP and climb the ranks.</p>
+      </div>
+      <div class="missions-layout">
+        <div class="missions-board" id="missionsBoard">
+          <!-- Missions injected by missions.js -->
+        </div>
+        <div class="progress-panel">
+          <div class="xp-bar-wrapper">
+            <div class="xp-label">
+              <span data-i18n="missions.level">Level</span>
+              <span class="xp-level" id="playerLevel">7</span>
+            </div>
+            <div class="xp-bar">
+              <div class="xp-fill" id="xpFill" style="width: 65%"></div>
+            </div>
+            <div class="xp-numbers"><span id="currentXP">650</span> / <span id="maxXP">1000</span> XP</div>
+          </div>
+          <div class="streak-display">
+            <span class="streak-fire">🔥</span>
+            <span class="streak-count" id="streakCount">12</span>
+            <span data-i18n="missions.streak">day streak</span>
+          </div>
+          <div class="badges-row" id="badgesRow">
+            <div class="badge" title="Tactician">⚔️</div>
+            <div class="badge" title="Defender">🛡️</div>
+            <div class="badge" title="Scholar">📚</div>
+            <div class="badge badge-locked" title="Master">👑</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHESS FEED ===== -->
+  <section class="feed-section" id="feed">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="feed.eyebrow">Chess Shorts</span>
+        <h2 data-i18n="feed.title">Learn Chess in 60 Seconds</h2>
+        <p data-i18n="feed.desc">Swipe through AI-explained lessons, tactical puzzles, and legendary game moments.</p>
+      </div>
+      <div class="feed-container">
+        <div class="feed-mobile-frame">
+          <div class="feed-scroll" id="feedScroll">
+            <!-- Feed items injected by feed.js -->
+          </div>
+          <div class="feed-controls">
+            <button class="feed-nav-btn" id="feedPrev">↑</button>
+            <button class="feed-nav-btn" id="feedNext">↓</button>
+          </div>
+        </div>
+        <div class="feed-sidebar">
+          <h3 data-i18n="feed.trending">Trending Topics</h3>
+          <div class="feed-topics" id="feedTopics"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MIND MAP ===== -->
+  <section class="mindmap-section" id="mindmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="mindmap.eyebrow">Player Profile</span>
+        <h2 data-i18n="mindmap.title">Your Chess Mind Map</h2>
+        <p data-i18n="mindmap.desc">A visual fingerprint of how you think over the board. It evolves with every game you play.</p>
+      </div>
+      <div class="mindmap-layout">
+        <canvas id="mindMapCanvas" width="500" height="500"></canvas>
+        <div class="mindmap-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#F0B429"></div>
+            <span data-i18n="mindmap.attack">Attack Tendency</span>
+            <span class="legend-val" id="attackVal">72%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#2DD4BF"></div>
+            <span data-i18n="mindmap.defense">Defense Pattern</span>
+            <span class="legend-val" id="defenseVal">45%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#A78BFA"></div>
+            <span data-i18n="mindmap.tactical">Tactical Vision</span>
+            <span class="legend-val" id="tacticalVal">63%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#F87171"></div>
+            <span data-i18n="mindmap.endgame">Endgame Skill</span>
+            <span class="legend-val" id="endgameVal">38%</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#34D399"></div>
+            <span data-i18n="mindmap.opening">Opening Knowledge</span>
+            <span class="legend-val" id="openingVal">81%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANALYTICS ===== -->
+  <section class="analytics-section" id="analytics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="analytics.eyebrow">Performance Dashboard</span>
+        <h2 data-i18n="analytics.title">Your Chess Analytics</h2>
+        <p data-i18n="analytics.desc">Track every aspect of your growth. Identify patterns. Eliminate weaknesses.</p>
+      </div>
+      <div class="analytics-grid" id="analyticsGrid">
+        <!-- Injected by analytics.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL ===== -->
+  <section class="social-section" id="social">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="social.eyebrow">Community</span>
+        <h2 data-i18n="social.title">Chess Is Better Together</h2>
+      </div>
+      <div class="social-tabs" id="socialTabs">
+        <button class="social-tab active" data-tab="leaderboard" data-i18n="social.leaderboard">Leaderboard</button>
+        <button class="social-tab" data-tab="nations" data-i18n="social.nations">Nations</button>
+        <button class="social-tab" data-tab="clubs" data-i18n="social.clubs">Clubs</button>
+        <button class="social-tab" data-tab="tournaments" data-i18n="social.tournaments">Tournaments</button>
+      </div>
+      <div class="social-content" id="socialContent">
+        <!-- Injected by matchmaking.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="pricing.eyebrow">Plans</span>
+        <h2 data-i18n="pricing.title">Choose Your Path to Mastery</h2>
+        <p data-i18n="pricing.desc">Start free. Level up when you're ready.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="plan-name" data-i18n="plan.free.name">Free</div>
+          <div class="plan-price">$0<span>/mo</span></div>
+          <p class="plan-tagline" data-i18n="plan.free.tag">Start your chess journey</p>
+          <ul class="plan-features">
+            <li>✓ <span data-i18n="plan.free.f1">Basic lessons & puzzles</span></li>
+            <li>✓ <span data-i18n="plan.free.f2">Daily missions (5/day)</span></li>
+            <li>✓ <span data-i18n="plan.free.f3">Chess Shorts feed</span></li>
+            <li>✓ <span data-i18n="plan.free.f4">Community access</span></li>
+            <li class="plan-locked">✗ <span data-i18n="plan.free.f5">AI Coach</span></li>
+            <li class="plan-locked">✗ <span data-i18n="plan.free.f6">Advanced analytics</span></li>
+          </ul>
+          <a href="#play" class="btn btn-ghost btn-full" data-i18n="plan.free.cta">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="plan-badge" data-i18n="plan.premium.badge">Most Popular</div>
+          <div class="plan-name" data-i18n="plan.premium.name">Premium</div>
+          <div class="plan-price">$9.99<span>/mo</span></div>
+          <p class="plan-tagline" data-i18n="plan.premium.tag">Unlock your AI coach</p>
+          <ul class="plan-features">
+            <li>✓ <span data-i18n="plan.premium.f1">Everything in Free</span></li>
+            <li>✓ <span data-i18n="plan.premium.f2">Full AI Coach access</span></li>
+            <li>✓ <span data-i18n="plan.premium.f3">Unlimited daily missions</span></li>
+            <li>✓ <span data-i18n="plan.premium.f4">Smart matchmaking</span></li>
+            <li>✓ <span data-i18n="plan.premium.f5">Post-game deep analysis</span></li>
+            <li>✓ <span data-i18n="plan.premium.f6">Weekly improvement plans</span></li>
+          </ul>
+          <a href="#play" class="btn btn-primary btn-full" data-i18n="plan.premium.cta">Start Premium</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name" data-i18n="plan.pro.name">Pro</div>
+          <div class="plan-price">$19.99<span>/mo</span></div>
+          <p class="plan-tagline" data-i18n="plan.pro.tag">Advanced analytics & profile</p>
+          <ul class="plan-features">
+            <li>✓ <span data-i18n="plan.pro.f1">Everything in Premium</span></li>
+            <li>✓ <span data-i18n="plan.pro.f2">Mind Map Chess Profile</span></li>
+            <li>✓ <span data-i18n="plan.pro.f3">Full analytics dashboard</span></li>
+            <li>✓ <span data-i18n="plan.pro.f4">Tournament participation</span></li>
+            <li>✓ <span data-i18n="plan.pro.f5">Priority matchmaking</span></li>
+            <li>✓ <span data-i18n="plan.pro.f6">Download game reports</span></li>
+          </ul>
+          <a href="#play" class="btn btn-secondary btn-full" data-i18n="plan.pro.cta">Go Pro</a>
+        </div>
+
+        <div class="pricing-card pricing-card--academy">
+          <div class="plan-name" data-i18n="plan.academy.name">Academy</div>
+          <div class="plan-price">Custom</div>
+          <p class="plan-tagline" data-i18n="plan.academy.tag">For schools & chess clubs</p>
+          <ul class="plan-features">
+            <li>✓ <span data-i18n="plan.academy.f1">All Pro features</span></li>
+            <li>✓ <span data-i18n="plan.academy.f2">Multi-seat management</span></li>
+            <li>✓ <span data-i18n="plan.academy.f3">Teacher dashboard</span></li>
+            <li>✓ <span data-i18n="plan.academy.f4">School competitions</span></li>
+            <li>✓ <span data-i18n="plan.academy.f5">Bulk analytics</span></li>
+            <li>✓ <span data-i18n="plan.academy.f6">Dedicated support</span></li>
+          </ul>
+          <a href="mailto:salatrir@gmail.com" class="btn btn-ghost btn-full" data-i18n="plan.academy.cta">Contact Us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="contact.eyebrow">Support</span>
+        <h2 data-i18n="contact.title">Get in Touch</h2>
+        <p data-i18n="contact.desc">Questions, partnerships, or school inquiries — we're here.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.email.label">Email</div>
+              <a href="mailto:salatrir@gmail.com" class="contact-value">salatrir@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🌐</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.web.label">Website</div>
+              <a href="https://rowel.xyz" class="contact-value">rowel.xyz</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🏫</span>
+            <div>
+              <div class="contact-label" data-i18n="contact.academy.label">Academy Inquiries</div>
+              <a href="mailto:salatrir@gmail.com?subject=Academy Plan" class="contact-value" data-i18n="contact.academy.val">Email for Academy pricing</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" class="form-input" placeholder="Your name" data-i18n-placeholder="contact.form.name" required />
+          <input type="email" class="form-input" placeholder="Your email" data-i18n-placeholder="contact.form.email" required />
+          <select class="form-input">
+            <option value="" data-i18n="contact.form.subject">Subject</option>
+            <option data-i18n="contact.form.s1">General question</option>
+            <option data-i18n="contact.form.s2">Academy / School plan</option>
+            <option data-i18n="contact.form.s3">Partnership</option>
+            <option data-i18n="contact.form.s4">Bug report</option>
+          </select>
+          <textarea class="form-input" rows="4" placeholder="Your message…" data-i18n-placeholder="contact.form.msg"></textarea>
+          <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-icon">♛</span>
+            <span class="logo-text">Rowel <span class="logo-accent">Chess OS</span></span>
+          </a>
+          <p data-i18n="footer.tagline">Where you don't just play chess… you learn to think like champions.</p>
+          <a href="mailto:salatrir@gmail.com" class="footer-email">salatrir@gmail.com</a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.platform">Platform</h4>
+          <ul>
+            <li><a href="#play" data-i18n="footer.play">Play Chess</a></li>
+            <li><a href="#learn" data-i18n="footer.missions">Daily Missions</a></li>
+            <li><a href="#feed" data-i18n="footer.feed">Chess Feed</a></li>
+            <li><a href="#analytics" data-i18n="footer.analytics">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.learn">Learn</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.tactics">Tactics</a></li>
+            <li><a href="#" data-i18n="footer.openings">Openings</a></li>
+            <li><a href="#" data-i18n="footer.endgames">Endgames</a></li>
+            <li><a href="#" data-i18n="footer.strategy">Strategy</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
+            <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Rowel Chess OS · <a href="https://rowel.xyz">rowel.xyz</a> · <a href="mailto:salatrir@gmail.com">salatrir@gmail.com</a></p>
+        <p data-i18n="footer.rights">All rights reserved. Built with ♟️ and AI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notifications -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="chess-engine.js"></script>
+  <script src="ai-coach.js"></script>
+  <script src="lessons.js"></script>
+  <script src="missions.js"></script>
+  <script src="matchmaking.js"></script>
+  <script src="analytics.js"></script>
+  <script src="feed.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
